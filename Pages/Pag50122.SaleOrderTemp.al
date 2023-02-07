@@ -1,10 +1,11 @@
 page 50122 "Sale Order Temp List"
 {
     ApplicationArea = All;
-    Caption = 'Sale Order Temp List';
+    Caption = 'Select a template for a new Sales Order';
     PageType = List;
     SourceTable = "Sales Order Temp";
     UsageCategory = Lists;
+    CardPageId = "Sales Ordr Temp card";
 
     layout
     {
