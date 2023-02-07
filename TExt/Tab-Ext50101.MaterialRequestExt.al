@@ -1,16 +1,11 @@
-tableextension 50101 "Material Request Ext" extends "Purchases & Payables Setup"
+tableextension 50111 "Sales & Recivable Ext" extends "Sales & Receivables Setup"
 {
     fields
     {
-        field(50100; "Material Request Nos"; Code[20])
+        field(50100; "Enable Template"; Boolean)
         {
+            Caption = 'Enable Template';
             DataClassification = ToBeClassified;
-            TableRelation = "No. Series";
-        }
-        field(50200; "Vendor Invoice Nos"; Code[20])
-        {
-            DataClassification = ToBeClassified;
-            TableRelation = "No. Series";
         }
     }
 }
