@@ -17,7 +17,12 @@ table 50127 SalesOrdItemLine
             Caption = 'Type';
             DataClassification = ToBeClassified;
         }
-        field(4; "No."; Code[20])
+        field(4; "Line No."; Integer)
+        {
+            Caption = 'Type';
+            DataClassification = ToBeClassified;
+        }
+        field(5; "No."; Code[20])
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
@@ -79,12 +84,12 @@ table 50127 SalesOrdItemLine
 
 
         }
-        field(5; "Description"; Text[100])
+        field(6; "Description"; Text[100])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(6; "Quantity"; Decimal)
+        field(7; "Quantity"; Decimal)
         {
             Caption = 'Quantity';
             DataClassification = ToBeClassified;
@@ -97,7 +102,7 @@ table 50127 SalesOrdItemLine
     }
     keys
     {
-        key(Key1; "No.", TempId)
+        key(Key1; TempId, "Line No.")
         {
             Clustered = true;
         }

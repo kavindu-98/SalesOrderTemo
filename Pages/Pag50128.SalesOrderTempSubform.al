@@ -3,6 +3,7 @@ page 50128 "Sales Order Temp Subform"
     Caption = 'Sales Order Temp Subform';
     PageType = ListPart;
     SourceTable = SalesOrdItemLine;
+    AutoSplitKey = true;
 
     layout
     {
