@@ -5,6 +5,7 @@ pageextension 50124 Sales_Oder_Card_Ext extends "Sales Order"
         if GuiAllowed then
             if Rec."No." = '' then
                 OdrTempMode := true;
+
     end;
 
     trigger OnAfterGetCurrRecord()
@@ -28,6 +29,7 @@ pageextension 50124 Sales_Oder_Card_Ext extends "Sales Order"
                 SalesHeader."Your Reference" := SalesOrdertemp."Your Reference";
                 SalesHeader.Validate("Sell-to Customer No.", SalesOrdertemp."Customer No.");
                 SalesHeader.Insert(true);
+                SalesHeader.NotRefreshed := true;
 
 
                 if SalesOrdertemp."Customer No." <> '' then begin
@@ -67,5 +69,6 @@ pageextension 50124 Sales_Oder_Card_Ext extends "Sales Order"
     var
         OdrTempMode: Boolean;
         TemplateCode: Code[20];
+
 
 }
