@@ -92,10 +92,6 @@ table 50127 SalesOrdItemLine
         }
 
 
-        // field(6; "Line No."; Integer)
-        // {
-        //     Caption = 'Line No.';
-        // }
 
 
     }
