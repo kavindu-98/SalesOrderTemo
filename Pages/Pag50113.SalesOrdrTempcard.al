@@ -35,6 +35,21 @@ page 50113 "Sales Ordr Temp card"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Your Reference field.';
                 }
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the Customer No field.';
+                    TableRelation = Customer;
+
+                }
+
+            }
+            part(SalesOrdItemLine; "Sales Order Temp Subform")
+            {
+                SubPageLink = TempId = field(TempId);
+                ApplicationArea = All;
+                // Editable = false;
+
             }
         }
     }

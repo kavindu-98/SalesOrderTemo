@@ -33,6 +33,12 @@ table 50120 "Sales Order Temp"
             DataClassification = ToBeClassified;
 
         }
+        field(6; "Customer No."; Code[20])
+        {
+            Caption = 'Customer No.';
+            DataClassification = ToBeClassified;
+
+        }
 
 
 
